@@ -2,43 +2,87 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Aermi Parfum</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aermi Parfum</title>
+
+  <!-- FONT ELEGAN -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Aermi Parfum</h1> 
-  <p class="desc">Parfum original, wangi tahan lama untuk aktivitas harian</p> 
+  <h1 class="brand">AERMI PARFUM</h1>
 
-  <div class="container">
-    <!-- PARFUM 1 -->
-    <div class="card" onclick="openDetail('Diamond Floral', 'Aroma segar dan tahan lama', '50000')">
-      <img src="parfum1.jpeg"> <!-- GANTI: foto parfum -->
-      <h3>Diamond Floral</h3> <!-- GANTI: nama parfum -->
+  <!-- PRODUK -->
+  <div class="product" onclick="openDetail('p1')">
+  <img src="images/parfum1.jpg">
+  <h3>Diamond Floral</h3>
+</div>
+
+<div class="product" onclick="openDetail('p2')">
+  <img src="images/parfum2.jpg">
+  <h3>Cool Mist</h3>
+</div>
+
+<div class="product" onclick="openDetail('p3')">
+  <img src="images/parfum3.jpg">
+  <h3>Master Rich</h3>
+</div>
+
+  <!-- DETAIL / MODAL -->
+  <div id="p1" class="modal">
+  <div class="modal-content">
+    <img src="images/parfum1.jpg" class="detail-img">
+    <p>Aroma elegan, tahan lama.</p>
+    <p class="price">30ml • Rp50.000</p>
+
+    <div class="testimoni">
+      <img src="images/testi1.jpg">
+      <img src="images/testi2.jpg">
     </div>
 
-    <!-- PARFUM 2 -->
-    <div class="card" onclick="openDetail('Cool Mist', 'Aroma manis dan elegan', '50000')">
-      <img src="parfum2.jpg"> <!-- GANTI: foto parfum -->
-      <h3>Cool Mist</h3>
-    </div>
+    <a href="https://wa.me/6285187337263?text=Halo%20saya%20ingin%20pesan%20diamond%20floral%2030ml"
+       class="btn">
+      Pesan via WhatsApp
+    </a>
 
-    <!-- PARFUM 3 -->
-    <div class="card" onclick="openDetail('Master Rich', 'Aroma maskulin dan hangat', '50000')">
-      <img src="parfum3.jpg"> <!-- GANTI: foto parfum -->
-      <h3>Master Rich</h3>
-    </div>
+    <span class="close" onclick="closeDetail()">×</span>
   </div>
+</div>
 
-  <!-- DETAIL PARFUM -->
-  <div id="detail" style="display:none;">
-    <h2 id="namaParfum"></h2>
-    <p id="deskripsiParfum"></p>
-    <p id="hargaParfum"></p>
+      <div id="p2" class="modal">
+  <div class="modal-content">
+    <img src="images/parfum2.jpg" class="detail-img">
+    <p>Aroma maskulin dan hangat.</p>
+    <p class="price">30ml • Rp50.000</p>
 
-    <a id="waBtn" target="_blank">Order via WhatsApp</a>
+    <a href="https://wa.me/6285187337263?text=Halo%20saya%20ingin%20pesan%20cool%20mist%2030ml"
+       class="btn">
+      Pesan via WhatsApp
+    </a>
+
+    <span class="close" onclick="closeDetail()">×</span>
   </div>
+</div>
 
+<div id="p3" class="modal">
+  <div class="modal-content">
+    <img src="images/parfum3.jpg" class="detail-img">
+    <p>Aroma mewah dan lembut.</p>
+    <p class="price">30ml • Rp50.000</p>
+
+    <a href="https://wa.me/6285187337263?text=Halo%20saya%20ingin%20pesan%20master%20rich%2030ml"
+       class="btn">
+      Pesan via WhatsApp
+    </a>
+
+    <span class="close" onclick="closeDetail()">×</span>
+  </div>
+</div>
+
+  <!-- JS -->
   <script src="script.js"></script>
 </body>
-</html>  
+</html>
